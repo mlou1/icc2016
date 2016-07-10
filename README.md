@@ -1,3 +1,22 @@
+#My Notes:
+
+I wrote the code using Python in Windows 10 OS however I tested using Cloud9 and it worked fine. Below here are the requirements to run the code:
+
+### Environment:
+Python 2.7.12
+
+### Modules Needed:
+- <b>Networkx</b> (install using: pip install networkx)
+- <b>Matplotlib</b> (install using: pip install matplotlib)	
+
+
+### The Logic:
+1. Read the JSON file by line by line
+
+2. If it is the first line, when a user pays another user, it will create node, edge, record how many neighbor(s) each node has and degree. The degree then calculate to get the median.
+
+
+
 # Table of Contents
 
 1. [Challenge Summary] (README.md#challenge-summary)
