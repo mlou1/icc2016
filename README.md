@@ -27,7 +27,7 @@ Before comparing, the code (the function you can see in <i>def entries</i>) will
 
 5. However, if it is not in 60 second or if it is more than 60 second, it will check all previous lines (records) up to the first sequence time (Not first line in the file; Each time the code create new degree list, it will reset the first sequence time aka starting point). By that, we make sure that no previous lines we miss in 60-second window. If found, add it into a temporary list. Later the code will use this temporary list to gather information such as created_time, target and actor and again the code will run to gather node, edge, record how many neighbor(s) each node has and create new value of degrees, based on point number 4.
 
-6. The function of <i>def median</i> has two version, one is the value of degrees is in sorted and another one is the value of degrees is not in sorted.
+6. The function of <i>def median</i> has two versions, one is the value of degrees is in sorted and another one is the value of degrees is not in sorted.
 
 Thank you,
 Muryadi Oey
