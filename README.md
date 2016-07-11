@@ -1,6 +1,6 @@
 #My Notes:
 
-I join my notes with Table of Contents from the ICC2016. 
+I joined my notes with Table of Contents from the ICC2016. 
 I wrote the code using Python in Windows 10 HP laptop CPU AMD A4-6210 RAM 8 GB,
 however I tested using Cloud9 and it worked fine. Below here are the requirements to run the code:
 
