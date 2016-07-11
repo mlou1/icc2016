@@ -144,14 +144,20 @@ def time_checking(delta_time,n,str_seq,latest_time,data):
 # This funtion to check Median degree and make it as two digit after decimal place
 # ------------------------------------------------------------------------------
 def median(mylist):
-    # It didnt say about the value of degree have to in sort list, however i include this below two lines if it needs to be sorted
-    ##sorts = sorted(mylist)
-    ##length = len(sorts)
-    
-    length = len(mylist)      # This must put in comment if it needs to be sorted
+
+    # It didnt say about the value of degree have to in sort list, however i include this below lines if it needs to be sorted
+    sorts = sorted(mylist)
+    length = len(sorts)
     if not length % 2:
-        return format(((mylist[length / 2] + mylist[length / 2 - 1]) / 2.0),'.2f')
-    return format(mylist[length / 2],'.2f')
+        return format(((sorts[length / 2] + sorts[length / 2 - 1]) / 2.0),'.2f')
+    return format(sorts[length / 2],'.2f')
+
+##    # Unsorted version
+##    length = len(mylist)
+##    if not length % 2:
+##        return format(((mylist[length / 2] + mylist[length / 2 - 1]) / 2.0),'.2f')
+##    return format(mylist[length / 2],'.2f')
+
 
 # ------------------------------------------------------------------------------
 # End of Define Function for Median
@@ -287,3 +293,4 @@ def main(argv):
 
 if __name__ == "__main__":
      sys.exit(main(sys.argv))
+
