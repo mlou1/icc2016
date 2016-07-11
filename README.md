@@ -1,6 +1,7 @@
 #My Notes:
 
-I wrote the code using Python in Windows 10 OS however I tested using Cloud9 and it worked fine. Below here are the requirements to run the code:
+I wrote the code using Python in Windows 10 HP laptop CPU AMD A4-6210 RAM 8 GB
+however I tested using Cloud9 and it worked fine. Below here are the requirements to run the code:
 
 ### Environment:
 Python 2.7.12
@@ -9,11 +10,26 @@ Python 2.7.12
 - <b>Networkx</b> (install using: pip install networkx)
 - <b>Matplotlib</b> (install using: pip install matplotlib)	
 
+### Goals:
+To calculate the median degree of a vertex in a graph and update it each time a new Venmo payment appears across 60-second window.
 
-### The Logic:
-1. Read the JSON file by line by line
+
+### The Logic of my code: 
+1. Read the JSON file - line by line.
 
 2. If it is the first line, when a user pays another user, it will create node, edge, record how many neighbor(s) each node has and degree. The degree then calculate to get the median.
+
+3. The degree itself will be used for next line as comparison.
+
+4. For the next line, when a user pays another user, it will check whether it falls in 60-second window or not. If it is in 60-second window, again, it will create node, edge, record how many neighbor(s) each node has and new degree by compare with previous degree.
+
+Before comparing, the code (the function you can see in <i>def entries</i>) will create a new empty degree list and the comparison between current degree and previous degree by check each number in previous degree against each number in current degree. If found, delete that number in the current degree and that number will be added into new empty degree list and if unable to found means it exists in previous degree but not current degree, it will add into new empty degree and until all number in current degree has been compared, if it exists in current degree, it will add into new empty degree. <b>Remember:</b> it will add numbers from previous degree first before adding numbers from current degree. By doing so, we maintain the order of the degree.
+
+5. However, if it is not in 60 second or if it is more than 60 second, it will check all previous lines (records) up to the first sequence time (Not first line in the file; Each time the code create new degree list, it will reset the first sequence time aka starting point). By that, we make sure that no previous lines we miss in 60-second window. If found, add it into a temporary list. Later the code will use this temporary list to gather information such as created_time, target and actor and again the code will run to gather node, edge, record how many neighbor(s) each node has and create new degree, based on point number4.
+
+
+
+
 
 
 
