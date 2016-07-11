@@ -1,6 +1,6 @@
 #My Notes:
 
-I wrote the code using Python in Windows 10 HP laptop CPU AMD A4-6210 RAM 8 GB
+I wrote the code using Python in Windows 10 HP laptop CPU AMD A4-6210 RAM 8 GB,
 however I tested using Cloud9 and it worked fine. Below here are the requirements to run the code:
 
 ### Environment:
